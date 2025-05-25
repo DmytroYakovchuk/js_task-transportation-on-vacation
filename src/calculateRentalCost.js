@@ -8,16 +8,19 @@ function calculateRentalCost(days) {
   const oneDay = 40;
   const returnMoneyThreeDays = 20;
   const returnMoneySevenDays = 50;
+  const shortPeriod = 2;
+  const longPeriod = 7;
+  const threeDays = 3;
 
-  if (days <= 2) {
+  if (days <= shortPeriod) {
     sumPaid = oneDay * days;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days >= threeDays && days < longPeriod) {
     sumPaid = oneDay * days - returnMoneyThreeDays;
   }
 
-  if (days >= 7) {
+  if (days >= longPeriod) {
     sumPaid = oneDay * days - returnMoneySevenDays;
   }
 
