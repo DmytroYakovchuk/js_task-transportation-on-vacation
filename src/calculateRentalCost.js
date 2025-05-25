@@ -14,13 +14,9 @@ function calculateRentalCost(days) {
 
   if (days <= shortPeriod) {
     sumPaid = oneDay * days;
-  }
-
-  if (days >= threeDays && days < longPeriod) {
+  } else if (days >= threeDays && days < longPeriod) {
     sumPaid = oneDay * days - returnMoneyThreeDays;
-  }
-
-  if (days >= longPeriod) {
+  } else if (days >= longPeriod) {
     sumPaid = oneDay * days - returnMoneySevenDays;
   }
 
